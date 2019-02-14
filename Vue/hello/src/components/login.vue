@@ -6,7 +6,7 @@
       <p>or</p>
       <span class="stroke"></span>
     </div>
-    
+
     <div>
       <p class="element">
         <span>EMAIL ADDRESS</span>
@@ -20,6 +20,7 @@
         <span>PASSWORD</span>
         <i class="fa fa-user" aria-hidden="true"></i>
       </p>
+
       <input placeholder="Password" type="password" name="password">
     </div>
 
@@ -37,28 +38,25 @@
 
 <script>
 export default {
-  name: 'loginComponent',
+  name: "loginComponent",
   data() {
     return {
-      email: 'string@gmail.com',
-
-    }
+      email: "string@gmail.com"
+    };
   },
 
   methods: {
-            navigate() {
-                this.$router.push({ name: "HelloWorld" });
-            },
-            change(e) {
-              this.email = e.target.value
-            }
-        }
+    navigate() {
+      this.$router.push({ name: "HelloWorld" });
+    },
+    change(e) {
+      this.email = e.target.value;
+    }
+  }
 };
-
 </script>
 
 <style scoped>
-
 .form-login {
   width: 300px;
   background-color: #fff;
@@ -86,7 +84,6 @@ h2 {
   background-color: #b2b2b2;
   margin: 0;
   margin-top: 25px;
-  
 }
 
 .wrap {
@@ -115,8 +112,8 @@ h2 {
 
 input {
   width: 90%;
-  height: 25px;
-  line-height: 25px;
+  height: 30px;
+  margin-bottom: 40px;
   padding-left: 5px;
   border: none;
 }
