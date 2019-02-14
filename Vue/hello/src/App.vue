@@ -1,6 +1,6 @@
 <template>
-  <div id="app">hfidjf
-    <login-container />
+  <div id="app">
+    <router-view></router-view>
   </div>
 </template>
 

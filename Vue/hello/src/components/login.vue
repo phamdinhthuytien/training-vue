@@ -12,7 +12,7 @@
         <span>EMAIL ADDRESS</span>
         <i class="fa fa-user" aria-hidden="true"></i>
       </p>
-      <input placeholder="@your-mail" type="text" name="email">
+      <input placeholder="@your-mail" type="text" :value="email" name="email" @change="change">
     </div>
 
     <div>
@@ -23,7 +23,9 @@
       <input placeholder="Password" type="password" name="password">
     </div>
 
-    <div class="btn">LOGIN</div>
+    <button @click="navigate" type="button" class="btn">
+      <span>LOGIN</span>
+    </button>
     <div class="create-account">
       <p>Account</p>
       <spain class="slash">/</spain>
@@ -35,8 +37,24 @@
 
 <script>
 export default {
-  name: 'loginComponent'
+  name: 'loginComponent',
+  data() {
+    return {
+      email: 'string@gmail.com',
+
+    }
+  },
+
+  methods: {
+            navigate() {
+                this.$router.push({ name: "HelloWorld" });
+            },
+            change(e) {
+              this.email = e.target.value
+            }
+        }
 };
+
 </script>
 
 <style scoped>
@@ -104,6 +122,8 @@ input {
 }
 
 .btn {
+  width: 100%;
+  border: none;
   background-color: #479b93;
   height: 50px;
   line-height: 50px;
