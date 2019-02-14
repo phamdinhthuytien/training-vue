@@ -106,7 +106,7 @@ input {
 .btn {
   background-color: #479b93;
   height: 50px;
-  line-height: 40px;
+  line-height: 50px;
   color: #fff;
   font-size: 11px;
   font-weight: 600;
